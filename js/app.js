@@ -28,7 +28,9 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player = function() {
-
+    this.x = 200;
+    this.y = 380;
+    this.sprite = 'images/char-boy.png';
 };
 
 Player.prototype.update = function() {
@@ -36,7 +38,26 @@ Player.prototype.update = function() {
 };
 
 Player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
 
+Player.prototype.handleInput = function(key) {
+    switch (key) {
+        case 'left':
+            this.x -= 100;
+            break;
+        case 'up':
+            this.y -= 80;
+            break;
+        case 'right':
+            this.x += 100;
+            break;
+        case 'down':
+            this.y += 80;
+            break;
+    }
+
+    console.log(this.x + " " + this.y);
 };
 
 // Now instantiate your objects.
