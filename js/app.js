@@ -1,12 +1,12 @@
-function randomValueFromArray(array) {
-    return array[Math.floor(Math.random() * array.length)];
-}
+Array.prototype.getRandom = function() {
+    return this[Math.floor(Math.random() * this.length)];
+};
 
 // Enemies our player must avoid
 var Enemy = function() {
     this.x = -100;
-    this.y = randomValueFromArray([60, 140, 220]);
-    this.speed = randomValueFromArray([60, 120, 200]);
+    this.y = [60, 140, 220].getRandom();
+    this.speed = [60, 120, 200].getRandom();
     this.sprite = 'images/enemy-bug.png';
 };
 
@@ -74,6 +74,7 @@ Player.prototype.handleInput = function(key) {
 // Place the player object in a variable called player
 var allEnemies = [new Enemy(), new Enemy(), new Enemy()];
 var player = new Player();
+var rate = 2000;
 
 
 // This listens for key presses and sends the keys to your
