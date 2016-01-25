@@ -80,7 +80,15 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
+    }
+
+    function checkCollisions() {
+        allEnemies.forEach(function(enemy) {
+            if (player.collides(enemy)) {
+                player.reset();
+            }
+        });
     }
 
     /* This is called by the update function and loops through all of the
@@ -162,7 +170,6 @@ var Engine = (function(global) {
         setInterval(function() {
             allEnemies.push(new Enemy());
         }, rate);
-        // noop
     }
 
     /* Go ahead and load all of the images we know we're going to need to

@@ -38,6 +38,10 @@ Player.prototype.reset = function() {
     this.y = 380;
 };
 
+Player.prototype.collides = function(enemy) {
+    return (this.y === enemy.y) && (enemy.x > this.x - 60) && (enemy.x < this.x + 60);
+};
+
 Player.prototype.update = function() {
 
 };
@@ -65,8 +69,6 @@ Player.prototype.handleInput = function(key) {
             if (this.y < 380) this.y += 80;
             break;
     }
-
-    console.log(this.x + " " + this.y);
 };
 
 // Now instantiate your objects.
