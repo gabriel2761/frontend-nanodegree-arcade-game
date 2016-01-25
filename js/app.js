@@ -44,16 +44,16 @@ Player.prototype.render = function() {
 Player.prototype.handleInput = function(key) {
     switch (key) {
         case 'left':
-            this.x -= 100;
+            if (this.x > 0) this.x -= 100;
             break;
         case 'up':
             this.y -= 80;
             break;
         case 'right':
-            this.x += 100;
+            if (this.x < 400) this.x += 100;
             break;
         case 'down':
-            this.y += 80;
+            if (this.y < 380) this.y += 80;
             break;
     }
 
