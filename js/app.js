@@ -33,6 +33,11 @@ var Player = function() {
     this.sprite = 'images/char-boy.png';
 };
 
+Player.prototype.reset = function() {
+    this.x = 200;
+    this.y = 380;
+};
+
 Player.prototype.update = function() {
 
 };
@@ -47,7 +52,11 @@ Player.prototype.handleInput = function(key) {
             if (this.x > 0) this.x -= 100;
             break;
         case 'up':
-            this.y -= 80;
+            if (this.y <= 60) {
+                this.reset();
+            } else {
+                this.y -= 80;
+            }
             break;
         case 'right':
             if (this.x < 400) this.x += 100;
