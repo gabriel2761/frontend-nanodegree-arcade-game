@@ -8,6 +8,6 @@
 ### Controls
 Use the arrow keys to move the player on the screen
 ### Rules
-Player must get to the water
-Avoid the lady bugs
-Touching a lady bug moves the player back to the beginning
+* Player must get to the water
+* Avoid the lady bugs
+* Touching a lady bug moves the player back to the beginning
