@@ -1,3 +1,50 @@
 body {
     text-align: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #727272;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 88px auto;
+    padding: 8px 28px;
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    text-align: left;
+    border-radius: 1.4%;;
+    box-shadow: 0 4px 12px #000;
+}
+
+.instructions-intro {
+    margin-top: 0;
+}
+
+.movement-instructions-container {
+    margin-top: 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.movement-instructions-container * {
+    width: 45%;
+}
+
+.instructions-exit {
+    margin-top: auto;
+    margin-right: 22px;
+    font-size: 29px;
+    cursor: pointer;
+    color: #3f51b5;
+    align-self: flex-end;
+}
+
+.instructions-exit:hover {
+    color: #303f9f;
 }
