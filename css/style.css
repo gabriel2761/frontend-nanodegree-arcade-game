@@ -4,7 +4,7 @@ body {
     color: #727272;
 }
 
-.instructions {
+#instructions {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -36,7 +36,7 @@ body {
     width: 45%;
 }
 
-.instructions-exit {
+#instructions-exit {
     margin-top: auto;
     margin-right: 22px;
     font-size: 29px;
@@ -45,6 +45,6 @@ body {
     align-self: flex-end;
 }
 
-.instructions-exit:hover {
+#instructions-exit:hover {
     color: #303f9f;
 }

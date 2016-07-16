@@ -1,3 +1,7 @@
+document.getElementById('instructions-exit').addEventListener('click', function() {
+    document.getElementById('instructions').style.display = 'none';
+});
+
 /**
  * @description Returns a random value from an array.
  * @return {value}
